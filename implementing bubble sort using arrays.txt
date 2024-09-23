@@ -1,0 +1,33 @@
+//implementing bubble sort using array
+//array of length n, n comparisons in first loop, n comparisons in second loop
+//time complexity, worst case=O(n.n)=O(n^2)
+// best case=O(n)
+
+#include<stdio.h>
+#include<conio.h>
+
+void main(){
+    int n;
+    int arr[100];
+    int i,j,temp;
+    printf("how many numbers do you want to enter: ");
+    scanf("%d",&n);
+    printf("feed the data: ");
+    for(i=0;i<n;i++){
+	scanf("%d", &arr[i]);
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<n-1;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    printf("sorted array is  ");
+    for(i=0;i<n;i++){
+        printf("%d  ",arr[i]);
+    }
+    getch();
+}
