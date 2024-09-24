@@ -1,0 +1,32 @@
+//implementing insertion sort using array and while loop
+//array of length n, n comparisons in first for loop, and averagely n/2 comparisons in while loop
+//time complexity, worst case=O(n.n/2)=O(n^2)
+// best case=O(n), while loop does not execute as array is alredy in order
+
+#include<stdio.h>
+#include<conio.h>
+
+void main(){
+    int n;
+    int arr[100];
+    int min;
+    int i,j,temp;
+    printf("how many numbers do you want to enter: ");
+    scanf("%d",&n);
+    printf("feed the data: ");
+    for(i=0;i<n;i++){
+        scanf("%d", &arr[i]);
+        temp=arr[i];
+        j=i-1;
+        while(j>=0 && arr[j]>temp){
+            arr[j+1]=arr[j];
+            j--;
+        }
+        arr[j+1]=temp;
+    }
+    printf("sorted array is  ");
+    for(i=0;i<n;i++){
+        printf("%d  ",arr[i]);
+    }
+    getch();
+}
