@@ -1,4 +1,4 @@
-//implementing insertion sort using array
+//implementing insertion sort using array and for loop
 //array of length n, n comparisons in first for loop, and averagely n/2 comparisons in second for loop
 //time complexity, worst case=O(n.n/2)=O(n^2)
 // best case=O(n), if statement does not execute as array is alredy in order, so it becomes empty for loop
